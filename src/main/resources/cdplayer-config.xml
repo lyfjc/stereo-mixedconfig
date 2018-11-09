@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean class="soundsystem.CDConfig" />
+
+  <bean id="cdPlayer"
+        class="soundsystem.CDPlayer"
+        c:cd-ref="compactDisc" />
+  <!--这里还可以通过
+   import resource=cdplayer-config.xml，
+   组合另一个xml的bean声明
+  -->
+        
+</beans>
